@@ -1,0 +1,18 @@
+services:
+  db:
+    image: postgres
+    container_name: db
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: pharmacy
+    ports:
+      - "50201:5432"
+  gui:
+    image: dpage/pgadmin4
+    container_name: gui
+    environment:
+      PGADMIN_DEFAULT_EMAIL: myuser@example.com
+      PGADMIN_DEFAULT_PASSWORD: secret
+    ports:
+      - "50202:80"
