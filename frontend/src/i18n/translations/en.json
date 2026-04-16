@@ -3,5 +3,55 @@
     "title": "Page not found",
     "description": "The page you're looking for does not exist or has been moved.",
     "back": "Back to homepage"
+  },
+
+  "accessability": {
+    "navigate": {
+      "home": "Navigate to home page",
+      "medicines": "Navigate to medicines page",
+      "pharmacies": "Navigate to pharmacies page",
+      "profile": "Navigate to profile page"
+    },
+
+    "show": {
+      "navigation_menu": "Show navigation menu"
+    }
+  },
+
+  "header": {
+    "navigate": {
+      "medicines": "Medicines",
+      "pharmacies": "Pharmacies",
+      "profile": "Profile"
+    }
+  },
+
+  "footer": {
+    "contact_us": {
+      "title": "Contact us",
+
+      "name": {
+        "placeholder": "Please enter your name"
+      },
+
+      "email": {
+        "placeholder": "Please enter your email"
+      },
+
+      "not_implemented": "Dear {name}, this feature is not currently implemented. We'll send an email to {email} once this feature is implemented.",
+      "submit": "Submit"
+    }
+  },
+
+  "medicines": {
+    "title": "Medicines List"
+  },
+
+  "pharmacies": {
+    "title": "Pharmacies List"
+  },
+
+  "profile": {
+    "title": "Profile"
   }
 }
