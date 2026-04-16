@@ -43,6 +43,16 @@ jobs:
     name: Spring Boot back-end
     runs-on: ubuntu-latest
 
+    services:
+      database:
+        image: postgres
+        env:
+          POSTGRES_DB: pharmacy
+          POSTGRES_USER: myuser
+          POSTGRES_PASSWORD: secret
+        ports:
+          - 50201:5432
+
     defaults:
       run:
         working-directory: backend
@@ -57,6 +67,9 @@ jobs:
           distribution: "temurin"
           java-version: "21"
           cache: "gradle"
+
+      - name: Wait for DB
+        run: sleep 20
 
       - name: Build & test
         run: ./gradlew clean build
