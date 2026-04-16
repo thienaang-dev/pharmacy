@@ -1,0 +1,7 @@
+{
+  "not_found": {
+    "title": "Không tìm thấy trang",
+    "description": "Trang bạn đang tìm không tồn tại hoặc đã được di chuyển",
+    "back": "Quay lại trang chủ"
+  }
+}
