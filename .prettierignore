@@ -1,0 +1,6 @@
+frontend
+backend
+
+.husky
+node_modules
+package-lock.json

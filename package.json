@@ -1,0 +1,24 @@
+{
+  "name": "pharmacy",
+  "version": "1.0.0",
+  "description": "A monorepo for Full-stack Pharmacy Commerce & Management application",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thienaang-dev/pharmacy.git"
+  },
+  "keywords": [],
+  "author": "thienaang-dev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thienaang-dev/pharmacy/issues"
+  },
+  "homepage": "https://github.com/thienaang-dev/pharmacy#readme",
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "3.8.3"
+  }
+}
