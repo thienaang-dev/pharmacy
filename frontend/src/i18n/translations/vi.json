@@ -1,0 +1,57 @@
+{
+  "not_found": {
+    "title": "Không tìm thấy trang",
+    "description": "Trang bạn đang tìm không tồn tại hoặc đã được di chuyển",
+    "back": "Quay lại trang chủ"
+  },
+
+  "accessability": {
+    "navigate": {
+      "home": "Điều hướng đến trang chủ",
+      "medicines": "Điều hướng đến trang thuốc",
+      "pharmacies": "Điều hướng đến trang nhà thuốc",
+      "profile": "Điều hướng đến trang hồ sơ"
+    },
+
+    "show": {
+      "navigation_menu": "Hiển thị menu điều hướng"
+    }
+  },
+
+  "header": {
+    "navigate": {
+      "medicines": "Thuốc",
+      "pharmacies": "Nhà thuốc",
+      "profile": "Hồ sơ"
+    }
+  },
+
+  "footer": {
+    "contact_us": {
+      "title": "Liên hệ với chúng tôi",
+
+      "name": {
+        "placeholder": "Vui lòng nhập tên của bạn"
+      },
+
+      "email": {
+        "placeholder": "Vui lòng nhập email của bạn"
+      },
+
+      "not_implemented": "Kính gửi {name}, tính năng này hiện không được triển khai. Chúng tôi sẽ gửi email đến {email} sau khi tính năng này được triển khai.",
+      "submit": "Gửi"
+    }
+  },
+
+  "medicines": {
+    "title": "Danh sách thuốc"
+  },
+
+  "pharmacies": {
+    "title": "Danh sách dược phẩm"
+  },
+
+  "profile": {
+    "title": "Hồ sơ"
+  }
+}
