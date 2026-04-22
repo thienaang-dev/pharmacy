@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pharma.backend.auth.dto.CreateUserRequestDto;
 import pharma.backend.auth.dto.CreateUserResponseDto;
+import pharma.backend.auth.dto.LoginUserRequestDto;
+import pharma.backend.auth.dto.LoginUserResponseDto;
 import pharma.backend.auth.service.AuthService;
 import pharma.backend.common.dto.ErrorDto;
 
@@ -27,7 +29,6 @@ import pharma.backend.common.dto.ErrorDto;
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
-
   private final AuthService authService;
 
   @Operation(summary = "Register a new user")
@@ -67,5 +68,34 @@ public class AuthController {
     log.info("REST request to register a new user");
     return ResponseEntity.status(HttpStatus.CREATED)
         .body(authService.register(createUserRequestDto));
+  }
+
+  @Operation(summary = "Login a user")
+  @ApiResponses(
+      value = {
+        @ApiResponse(
+            responseCode = "200",
+            description = "Successfully authenticates user",
+            content =
+                @Content(
+                    schema = @Schema(implementation = LoginUserResponseDto.class),
+                    mediaType = "application/json")),
+        @ApiResponse(
+            responseCode = "409",
+            description = "Invalid username or password",
+            content =
+                @Content(
+                    schema = @Schema(implementation = ErrorDto.class),
+                    mediaType = "application/json",
+                    examples =
+                        @ExampleObject(
+                            value =
+                                "{\"code\": \"409\", \"message\": \"Invalid username or password\"}"))),
+      })
+  @PostMapping("/login")
+  private ResponseEntity<LoginUserResponseDto> login(
+      @Valid @RequestBody LoginUserRequestDto loginUserRequestDto) {
+    log.info("REST request to login a user");
+    return ResponseEntity.ok(authService.login(loginUserRequestDto));
   }
 }

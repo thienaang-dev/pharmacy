@@ -21,9 +21,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CreateUserRequestDto implements Serializable {
-
-  @Serial
-  private static final long serialVersionUID = 1L;
+  @Serial private static final long serialVersionUID = 1L;
 
   @NotBlank(message = "Username cannot be blank")
   @JsonProperty("username")

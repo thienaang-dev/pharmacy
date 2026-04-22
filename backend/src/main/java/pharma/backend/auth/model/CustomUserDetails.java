@@ -12,13 +12,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CustomUserDetails implements UserDetails {
-
   private User user;
 
   @Override
   public @NonNull Collection<? extends GrantedAuthority> getAuthorities() {
     return user.getRoles().stream()
-        .map(role -> new SimpleGrantedAuthority(role.getName())).toList();
+        .map(role -> new SimpleGrantedAuthority(role.getName()))
+        .toList();
   }
 
   @Override

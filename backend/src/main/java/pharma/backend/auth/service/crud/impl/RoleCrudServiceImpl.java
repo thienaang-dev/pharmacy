@@ -16,7 +16,6 @@ import pharma.backend.auth.service.crud.RoleCrudService;
 @RequiredArgsConstructor
 @Service
 public class RoleCrudServiceImpl implements RoleCrudService {
-
   private final RoleRepository roleRepository;
 
   @Override

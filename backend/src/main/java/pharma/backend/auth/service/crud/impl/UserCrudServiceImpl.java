@@ -11,7 +11,6 @@ import pharma.backend.auth.service.crud.UserCrudService;
 @RequiredArgsConstructor
 @Service
 public class UserCrudServiceImpl implements UserCrudService {
-
   private final UserRepository userRepository;
 
   @Override

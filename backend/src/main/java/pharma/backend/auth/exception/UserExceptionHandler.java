@@ -13,12 +13,24 @@ import pharma.backend.common.mapper.ErrorMapper;
 @RestControllerAdvice
 @Order(10)
 public class UserExceptionHandler {
-
   private final ErrorMapper errorMapper;
 
   @ExceptionHandler(UserAlreadyExistsException.class)
   public ResponseEntity<ErrorDto> handeUserAlreadyExistsException(UserAlreadyExistsException ex) {
     ErrorDto errorDto = errorMapper.toDto(HttpStatus.CONFLICT.getReasonPhrase(), ex.getMessage());
     return ResponseEntity.status(HttpStatus.CONFLICT).body(errorDto);
+  }
+
+  @ExceptionHandler(UserNotFoundException.class)
+  public ResponseEntity<ErrorDto> handleUserNotFoundException(UserNotFoundException ex) {
+    ErrorDto errorDto = errorMapper.toDto(HttpStatus.NOT_FOUND.getReasonPhrase(), ex.getMessage());
+    return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorDto);
+  }
+
+  @ExceptionHandler(UnauthorizedException.class)
+  public ResponseEntity<ErrorDto> handleUnauthorizedException(UnauthorizedException ex) {
+    ErrorDto errorDto =
+        errorMapper.toDto(HttpStatus.UNAUTHORIZED.getReasonPhrase(), ex.getMessage());
+    return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(errorDto);
   }
 }

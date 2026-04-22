@@ -14,8 +14,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "roles", indexes = {
-    @Index(name = "idx_roles_name", columnList = "name", unique = true)})
+@Table(
+    name = "roles",
+    indexes = {@Index(name = "idx_roles_name", columnList = "name", unique = true)})
 @Getter
 @Setter
 @NoArgsConstructor
